@@ -8,3 +8,5 @@ Quick tool that tells you which placed buffers in a PIX capture overlap a given 
 ```
 
 It prints the API object IDs of the overlapping buffers. Only looks at placed buffers, not textures.
+
+Add `--writes` on the end and it replays the capture and prints every event that changes the buffer's contents instead (any buffer, not just placed ones). Slow on big captures since it reads the buffer back after every event.
